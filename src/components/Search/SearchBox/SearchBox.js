@@ -25,10 +25,15 @@ const SearchBox = () => {
         placeholder="type a location"
       />
       {search !== "" && (
+        <div className="card text-white bg-primary mb-3">
+        <h2>Search Results</h2>
+      <div className="d-flex justify-content-center">
         <SearchResult
           url={`https://rickandmortyapi.com/api/location/?name=${search}`}
           handle={handleSearch}
         />
+
+</div> </div>
       )}
       <LocationContainer url={url} />
       <ResidentContainer url={url} />
